@@ -1,0 +1,23 @@
+n = int(input())
+S = ''
+Q = []
+oldS = ['']*20
+k = 0
+oldS[0] = ' '
+for i in range(n):
+    Q.append(input().split())
+
+for i in range(len(Q)):
+    if int(Q[i][0]) == 1:
+        k = k + 1
+        oldS[k] = S
+        S = S + Q[i][1]
+    if int(Q[i][0]) == 2:
+        k += 1
+        oldS[k] = S
+        S = S[:-1 * int(Q[i][1])]
+    if int(Q[i][0]) == 3:
+        print(S[int(Q[i][1])-1])
+    if int(Q[i][0]) == 4:
+        S = oldS[k]
+        k -= 1
