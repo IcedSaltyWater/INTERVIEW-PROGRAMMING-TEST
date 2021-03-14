@@ -1,4 +1,4 @@
-# INTERVIEW-PROGRAMMING-TEST
+# Class Programming Questions
 
 Some programming questions from previous exercise.
 
